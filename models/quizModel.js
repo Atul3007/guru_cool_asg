@@ -10,7 +10,7 @@ const quizModel = mongoose.model('Quiz', new mongoose.Schema({
     },
   ],
   duration: Number,
-  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'gurucool_users' },
 }));
 
 
