@@ -3,7 +3,7 @@ const {
   registerController,
   loginController
 } = require("../controller/registerController");
-const { requireSignin, checkRole } = require("../middlewares/atuhMiddleware");
+const { requireSignin} = require("../middlewares/atuhMiddleware");
 
 const router = express.Router();
 
@@ -17,7 +17,7 @@ router.get("/user-auth", requireSignin, (req, res) => {
 });
 
 //protected user route
-router.get("/admin-auth", requireSignin, checkRole, (req, res) => {
+router.get("/admin-auth", requireSignin, (req, res) => {
   res.status(200).send({ ok: true });
 });
 
