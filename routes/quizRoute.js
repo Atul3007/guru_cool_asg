@@ -4,7 +4,7 @@ const { postQuestion, participateQuiz } = require("../controller/quizController"
 const quizRouter = express.Router();
 
 quizRouter.post("/post-quiz-question", requireSignin, postQuestion)
-quizRouter.post("/quizzes/:id/participate", requireSignin, participateQuiz)
+quizRouter.post("/quizzes/:category", requireSignin, participateQuiz)
 
 module.exports = {
   quizRouter,
