@@ -1,7 +1,7 @@
 const express = require("express");
 const { connection } = require("./config/db");
 const { router } = require("./routes/authRoute");
-const { quizRouter } = require("./routes/quizRoute");
+const { urlrouter } = require("./routes/urlRoute");
 
 const cors = require("cors"); 
 const app = express();
@@ -16,7 +16,7 @@ app.use(
 const port = process.env.PORT; 
 
  app.use("/api", router);
- app.use("/api/product/",quizRouter)
+ app.use("/api/url/",urlrouter)
 
 app.get("/test", (req, res) => {
   try {
