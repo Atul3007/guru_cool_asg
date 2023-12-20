@@ -52,14 +52,14 @@ Access the API at http://localhost:3000/api.
 
 ## API Endpoints
 # Authentication
-# POST /api/register: Register a new user. Requires a JSON body with name, email, password, and confirmPassword.
+* POST /api/register: Register a new user. Requires a JSON body with name, email, password, and confirmPassword.
 
-# POST /api/login: Login and obtain a JWT token. Requires a JSON body with email and password.
+* POST /api/login: Login and obtain a JWT token. Requires a JSON body with email and password.
 
 # URL Shortening
-# POST /api/url/shorten: Shorten a URL. Requires authentication. Requires a JSON body with originalUrl.
+* POST /api/url/shorten: Shorten a URL. Requires authentication. Requires a JSON body with originalUrl.
 
-# GET /api/url/:shortenurl: Redirect to the original long URL associated with the provided short code.
+* GET /api/url/:shortenurl: Redirect to the original long URL associated with the provided short code.
 
 ## Error Handling
 * The API returns appropriate error messages in case of invalid requests, authentication failures, or other errors.
