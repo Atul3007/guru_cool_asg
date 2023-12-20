@@ -18,7 +18,7 @@ const port = process.env.PORT;
  app.use("/api", router);
  app.use("/api/url/",urlrouter)
 
-app.get("/test", (req, res) => {
+app.get("/", (req, res) => {
   try {
     res.send("Welcome");
   } catch (error) {
